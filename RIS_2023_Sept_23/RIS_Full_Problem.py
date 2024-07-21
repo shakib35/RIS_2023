@@ -163,7 +163,7 @@ if __name__ == '__main__':
     noise_power = -100
     iot_devices = 64
     ris_elements = [4, 25, 64, 144, 256]
-    folder_path = os.getcwd()
+    folder_path = os.path.dirname(os.path.abspath(__file__))
 
 
 

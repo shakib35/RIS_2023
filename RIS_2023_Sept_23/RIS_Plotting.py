@@ -7,7 +7,7 @@ if __name__ == "__main__":
 
     noise_power = 100
 
-    cwd_path = os.getcwd()
+    cwd_path = os.path.dirname(os.path.abspath(__file__))
     print(cwd_path)
     folder_path = os.path.join(cwd_path, f"{noise_power}dBm_noise")
     print(folder_path)

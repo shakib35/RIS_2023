@@ -108,7 +108,7 @@ def optimizeSystem(RIS_System, opt_iterations=10, verbose=False, debug=False):
 
         """
             Sub-Problem 1:
-            Given a fixed omega, maximize objective function.
+            Given a fixed omega(w in paper), maximize objective function.
             Return v and v_r.
         """
 
@@ -119,7 +119,7 @@ def optimizeSystem(RIS_System, opt_iterations=10, verbose=False, debug=False):
         """
         Sub-Problem 2:
         Given optimized v from previous objective, optimize objective.
-        Return omega.
+        Return omega(w in paper).
         """
 
         solve_dict_p2 = Optimize_Solve_Sub_Problem_2(RIS_System=RIS_System,

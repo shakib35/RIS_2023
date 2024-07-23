@@ -168,10 +168,10 @@ if __name__ == '__main__':
 
     for num_ris in ris_elements:
 
-        subfolder = f"ris_elements\\{iot_devices}_iot\\ris_{num_ris}\\"
+        subfolder = os.path.join("ris_elements", f"{iot_devices}_iot", f"ris_{num_ris}")
         sub_path = os.path.join(folder_path, subfolder)
         if not os.path.isdir(sub_path):
-            os.mkdir(sub_path)
+            os.mkdirs(sub_path)
 
 
 
@@ -182,7 +182,7 @@ if __name__ == '__main__':
             name = f'{linear_power}dBm.csv'
             #print(f'\n{name}')
 
-            save_path = os.path.join(folder_path, subfolder, name)
+            save_path = os.path.join(sub_path, name)
             print('output file name: ', save_path)
             # jjz = np.loadtxt(save_path, delimiter=',')
             # np.savetxt(save_path, jz, delimiter=",")

@@ -5,7 +5,7 @@ import time
 
 if __name__ == "__main__":
 
-    noise_power = 100
+    noise_power = 30
 
     cwd_path = os.path.dirname(os.path.abspath(__file__))
     print(cwd_path)
@@ -20,7 +20,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     # ax.set_xscale("log", nonpositive='clip')
     for i, lin_p in enumerate(linear_power_list):
-        name = f'{lin_p}dBm.csv'
+        name = f'{lin_p}dBm_RIS_System.csv'
         save_path = os.path.join(folder_path, name)
 
         if not os.path.isfile(save_path):
